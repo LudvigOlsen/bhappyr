@@ -8,6 +8,12 @@
 # Word sets must be saved to sysdata.rda to be available for addin
 # when package is not attached. See save_to_sysdata.R
 
+
+##  .................. #< c07aec39ea2366624072bac5b2aa6daa ># ..................
+##  Bugs to fix                                                             ####
+
+# Got this: proofread\tproposed
+
 #   ____________________________________________________________________________
 #   Inspiration                                                             ####
 ##  .................. #< 5498927a8f37e70c9e9612925a01e598 ># ..................
@@ -19,6 +25,7 @@
 #
 #
 #
+
 
 ##  .................. #< 88a3ae9ac1ab122d17ceb0a852e44c02 ># ..................
 ##  Forms / structures                                                      ####
