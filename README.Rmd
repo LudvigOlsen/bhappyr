@@ -20,7 +20,7 @@ Generates amusing feedback to lighten the mood of statisticians. Contains addin 
 
 By Ludvig R. Olsen,  
 Cognitive Science, Aarhus University.  
-Started in Oct. 2016 
+Started in March, 2017 
 
 Contact at:
 r-pkgs@ludvigolsen.dk
