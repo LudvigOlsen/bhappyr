@@ -31,8 +31,11 @@ Main functions:
 
 ## Installation  
 
-> install.packages("devtools")  
+>
+> install.packages("devtools")   
+>
 > devtools::install_github("LudvigOlsen/bhappyr")  
+>
 
 ## Use addin
 

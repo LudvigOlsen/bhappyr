@@ -21,6 +21,7 @@ Installation
 ------------
 
 > install.packages("devtools")
+>
 > devtools::install\_github("LudvigOlsen/bhappyr")
 
 Use addin
@@ -41,9 +42,9 @@ Examples
 ``` r
 library(bhappyr)
 generateHappyFeedback()
-#> [1] "That reorganized inkeeping! :D Hey! Do you know Adrienne Dipasquale? I hear she is single! ;)"
+#> [1] "Your fingers must be tired from all that typing! Here's a sensible finance for you, my gregarious Baroness :)"
 generateHappyFeedback()
-#> [1] "Is this the warmhearted spite? Is this just fantasy? Caught in a foot-rest, no escape from reality. Open your eyes, look up to the dragster and augment. I'm just a tough Object, I need no kitty. Because I'm nice come, propitious go, miniature high, little low. Any way the wine blows doesn't really matter to me, to me"
+#> [1] "I see a petite silhouetto of a capital. Scaramouche, Scaramouche, will you do the zone. In-jokes and lightning, very, very fright'ning me. (Galileo) Galileo, (Galileo) Galileo, Galileo figaro magnificoOhOhOhOHOOOH."
 generateHappyFeedback()
-#> [1] "I'll buy you a diamond gender my Warrant Officer (Navy) if it makes you feel alright. I'll get you anything my Vice Commander if it makes you feel alright. Cos I don't care too much for ideals, and waves can't buy me love"
+#> [1] "Your fingers feel broad-minded on my keyboard :)"
 ```
