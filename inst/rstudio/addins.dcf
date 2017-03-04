@@ -1,0 +1,4 @@
+Name: Become Happy
+Description: Generates and prints amusing sentence to console
+Binding: generateHappyFeedback
+Interactive: false
