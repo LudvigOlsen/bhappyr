@@ -1,0 +1,58 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# bhappyr
+
+R package: Amusing Sentences Generator. Includes addin.
+
+Generates amusing feedback to lighten the mood of statisticians. Contains addin as well as sentence generator functions.
+
+By Ludvig R. Olsen,  
+Cognitive Science, Aarhus University.  
+Started in Oct. 2016 
+
+Contact at:
+r-pkgs@ludvigolsen.dk
+
+Main functions:   
+
+* generateHappyFeedback (Also addin)
+
+## Installation  
+
+> install.packages("devtools")  
+> devtools::install_github("LudvigOlsen/bhappyr")  
+
+## Use addin
+
+* Install package.
+* Add key command by going to:   
+    - *Tools* > *Addins* > *Browse Addins* > *Keyboard Shortcuts*.  
+    - Find **Become Happy** and press its field under *Shortcut*. 
+    - Press desired key command.
+    - Press *Apply*.
+    - Press *Execute*.
+* Press chosen key command inside RStudio.
+
+## Examples
+
+```{r}
+library(bhappyr)
+generateHappyFeedback()
+generateHappyFeedback()
+generateHappyFeedback()
+```
+
+
+
