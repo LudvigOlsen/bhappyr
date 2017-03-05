@@ -3,3 +3,4 @@
 export(access_word_list)
 export(generateHappyFeedback)
 export(generate_sentence)
+export(rate_sentence)
