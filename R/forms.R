@@ -1,6 +1,6 @@
 
 #   __________________ #< 3e6108ca802d8733302f3eb24a05c8ee ># __________________
-#   Forms / structures                                                      ####
+#   Internal structures                                                      ####
 ##  .................. #< 40b6f872f6d461043b71c17512876829 ># ..................
 ##  Word types                                                              ####
 
@@ -35,7 +35,7 @@
 ##  .................. #< 0d69d363f47ec2fed698c9c94fcd7a5a ># ..................
 ##  List of forms                                                           ####
 
-forms <- c("You, my [positive_adj] [salutation], [create_syn] [positive_adv] [positive_adj] code",
+int_structs <- c("You, my [positive_adj] [salutation], [create_syn] [positive_adv] [positive_adj] code",
            "Nothing in this [big_syn/small_syn] world [create_syn(w1)]s more happiness than you, [salutation]",
            "When it was all [positive_vb_past] so [positive_adv], I [positive_adv] started dreaming about you at night :) <3",
            "My [salutation] just re[positive_vb_past] my [positive_adj] code. I'm [positive_adv] sure yours is [positive_adv] better!",
@@ -49,16 +49,17 @@ forms <- c("You, my [positive_adj] [salutation], [create_syn] [positive_adv] [po
            "Don't worry, [salutation], we are a team now! We will solve this. Together we are the '[positive_adj] [noun]s!'",
            "You know what they say about bugs? They are the [positive_adv] [positive_adj] [noun] that [positive_adv] [positive_vb(w1)]s your [noun]. I kind of agree with that!",
            "If the [noun] [positive_vb_past] your [positive_adj] [noun]. Would you [positive_vb] it? These are the questions facing a [noun] nowadays.",
-           "My [statistics_tradition] model of the [nationality_adj] [noun]'s [verb_ing] strategies would make you [positive_vb]!"
+           "My [statistics_tradition] model of the [nationality_adj] [noun]'s [verb_ing] strategies would make you [positive_vb]!",
+           "[salutation]! How you've grown with the task! I envy your [positive_adj] focusing skills!"
            )
 
-song_forms <- c(
-  "I'll buy you a diamond [noun] my [salutation] if it makes you feel alright. I'll get you anything my [salutation] if it makes you feel alright. Cos I don't care too much for [noun_plural], and [noun_plural] can't buy me love",
+song_structs <- c(
+  "I'll buy you a diamond [noun] my [salutation] if it makes you feel alright. I'll get you anything my [salutation] if it makes you feel alright. Cos I don't care too much for [noun_plural], and [noun_plural] can't buy me love!",
   "I'm a shooting [noun] leaping through the [noun]. Like a [noun] defying the laws of gravity. I'm a [noun] passing by like Lady [female_first_name]. I'm gonna go go go. There's no stopping meeee.",
   "Is this the [positive_adj] [noun]? Is this just fantasy? Caught in a [noun], no escape from reality. Open your eyes, look up to the [noun] and [positive_vb]. I'm just a [positive_adj] [salutation], I need no [noun]. Because I'm [positive_adj] come, [positive_adj] go, [small_syn] high, [small_syn] low. Any way the [noun] blows doesn't really matter to me, to me",
   "I see a [small_syn] silhouetto of a [noun]. Scaramouche, Scaramouche, will you do the [noun]. [noun_plural] and lightning, very, very fright'ning me. (Galileo) Galileo, (Galileo) Galileo, Galileo figaro magnificoOhOhOhOHOOOH.")
 
-fingers_forms <- c("Your fingers must be tired from all that typing! Here's a [positive_adj] [noun] for you, my [positive_adj] [salutation] :)",
+finger_structs <- c("Your fingers must be tired from all that typing! Here's a [positive_adj] [noun] for you, my [positive_adj] [salutation] :)",
                    "[female_first_name] said: Doc, my fingers fell off yesterday when I was writing the abstract for my PhD thesis. Doc said: rock–paper–scissors on who gets to travel back in time and fix it! 'Hahahah', the [salutation] who was also in the room laughed [positive_adv].",
                    "Your fingers feel [positive_adj] on my keyboard :)",
                    "If your fingers are as [positive_adj] as your code, you can [positive_vb] my console all day!")
