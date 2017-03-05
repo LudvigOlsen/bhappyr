@@ -7,8 +7,8 @@
 rate_sentence(n = 1, question = "Was this sentence funny?", rscale = c(1,
   10), max_rating = "Extremely", min_rating = "Not at all!",
   change_label = FALSE, change_rscale = FALSE, rscale_limits = c(1, 1000),
-  structures = NULL, word_lists = NULL, int_structures = TRUE,
-  int_word_lists = TRUE)
+  simulate = FALSE, structures = NULL, word_lists = NULL,
+  int_structures = TRUE, int_word_lists = TRUE)
 }
 \arguments{
 \item{n}{Number of sentences to generate (Integer).}
@@ -36,6 +36,8 @@ on each run or only once (Logical).}
 \item{rscale_limits}{Limits if generating random scale
 
 E.g. c(1,1000)}
+
+\item{simulate}{Simulate user ratings (Logical).}
 
 \item{structures}{Character Vector. E.g.:
 
@@ -129,21 +131,28 @@ Notice: These are added as needed by author.
 # Attach package
 library(bhappyr)
 
+# Notice: The argument 'simulate' is set to TRUE
+# as the function is elsewise interactive, i.e.
+# it is waiting for user input.
+# Remove or set to FALSE when running as experiment!
+
 # Example 1
 # Generate 1 sentence and rate it.
-rate_sentence()
+rate_sentence(n=1, simulate = TRUE)
 
 # Example 2
 # Generate 3 sentences and rate them.
 # Use random scale on each run.
 rate_sentence(n=3, rscale = 'random',
-              change_rscale = TRUE)
+              change_rscale = TRUE,
+              simulate = TRUE)
 
 # Example 3
 # Generate 3 sentences and rate them.
 # Use random max_rating label on each run.
 rate_sentence(n=3, max_rating = "[superb(upper)]",
-              change_label = TRUE)
+              change_label = TRUE,
+              simulate = TRUE)
 }
 \author{
 Ludvig Renbo Olsen, \email{r-pkgs@ludvigolsen.dk}

@@ -20,6 +20,7 @@ Generates amusing feedback to lighten the mood of statisticians. Contains addin 
 
 Pass new structures and word lists to generate unique sentences.  
 
+Rate sentences on a given question and rating scale. Simulate user ratings.  
 
 By Ludvig R. Olsen,  
 Cognitive Science, Aarhus University.  
@@ -61,7 +62,7 @@ Main functions:
 Quickly generate a (hopefully) amusing sentence.
 
 ```{r}
-# Attach package
+# Attach packages
 library(bhappyr)
 
 generateHappyFeedback()
@@ -73,9 +74,11 @@ generateHappyFeedback()
 
 Pass new structures and word lists and turn off internal structures and word lists.
 
-```{r}
-# Attach package
+```{r message=FALSE, warning=FALSE}
+# Attach packages
 library(bhappyr)
+library(dplyr) # %>% 
+library(knitr) # kable()
 
 # Create structures
 st <- c("[salutation]! You are [positive_adj] today! ;)",
@@ -90,7 +93,8 @@ wl <- list("salutation" = c("Sir", "Mother", "Dear", "Friend"),
 # Using internal structures + word lists
 
 # Generate 1 sentence
-generate_sentence()
+generate_sentence() %>% 
+  kable()
 
 ## Example 2
 # Providing structures
@@ -98,7 +102,8 @@ generate_sentence()
 
 # Generate 2 sentences
 generate_sentence(n = 2, structures = st,
-                  int_structures = FALSE)
+                  int_structures = FALSE) %>% 
+  kable()
 
 ## Example 3
 # Providing word_lists and structures
@@ -108,7 +113,8 @@ generate_sentence(n = 2, structures = st,
 generate_sentence(n = 3, structures = st,
                   word_lists = wl,
                   int_structures = FALSE,
-                  int_word_lists = FALSE)
+                  int_word_lists = FALSE) %>% 
+  kable()
 
 ```
 
@@ -121,27 +127,37 @@ Is able to randomly create rating scales - either once or for each sentence.
 
 Allows use of word types in max/min rating labels. Find a new word once or for every sentence.
 
-Note: Code not evaluated as it is interactive.
-
-```{r eval=FALSE}
-# Attach package
+```{r message=FALSE, warning=FALSE}
+# Attach packages
 library(bhappyr)
+library(dplyr) # %>% 
+library(knitr) # kable()
+
+# Notice: The argument 'simulate' is set to TRUE
+# as the function is elsewise interactive, i.e.
+# it is waiting for user input.
+# Remove or set to FALSE when running as experiment!
 
 # Example 1
 # Generate 1 sentence and rate it.
-rate_sentence()
+rate_sentence(n=1, simulate = TRUE) %>% 
+  kable()
 
 # Example 2
 # Generate 3 sentences and rate them.
 # Use random scale on each run.
 rate_sentence(n=3, rscale = 'random',
-              change_rscale = TRUE)
+              change_rscale = TRUE,
+              simulate = TRUE) %>% 
+  kable()
 
 # Example 3
 # Generate 3 sentences and rate them.
 # Use random max_rating label on each run.
 rate_sentence(n=3, max_rating = "[superb(upper)]",
-              change_label = TRUE)
+              change_label = TRUE,
+              simulate = TRUE) %>% 
+  kable()
 
 ```
 

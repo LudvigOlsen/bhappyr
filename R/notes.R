@@ -12,6 +12,7 @@
 
 # How to pass multiple word info codes?
 
+# Set up more test for simulated rate_sentence()
 
 ##  .................. #< c07aec39ea2366624072bac5b2aa6daa ># ..................
 ##  Bugs to fix                                                             ####
