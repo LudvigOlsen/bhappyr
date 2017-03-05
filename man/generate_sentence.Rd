@@ -56,53 +56,53 @@ structure, pass only one structure and set int_structures to FALSE.
 \section{Word types}{
 
 
-\subsection{Positive words}
+\subsection{Positive words}{
 [positive_adj]
 [positive_vb]
 [positive_vb_past]
-[positive_adv]
+[positive_adv]}
 
-\subsection{Verb forms}
+\subsection{Verb forms}{
 [verb_base]
 [verb_past]
 [verb_past_participle]
 [verb_es]
-[verb_ing]
+[verb_ing]}
 
-\subsection{Noun forms}
+\subsection{Noun forms}{
 [noun]
-[noun_plural]
+[noun_plural]}
 
-\subsection{Persons}
+\subsection{Persons}{
 [salutation]
 [male_first_name]
 [female_first_name]
 [male_full_name]
-[female_full_name]
+[female_full_name]}
 
-\subsection{Specific synonyms}
+\subsection{Specific synonyms}{
 Notice: These are added as needed by author.
 
 [create_syn]
 [small_syn]
-[big_syn]
+[big_syn]}
 
-\subsection{Nationality}
+\subsection{Nationality}{
 [nationality_adj]
-[nationality_people]
+[nationality_people]}
 
-\subsection{Statistics}
-[statistics_tradition]
+\subsection{Statistics}{
+[statistics_tradition]}
 }
 
 \section{Word info codes}{
 
 
-\subsection{w + number}
+\subsection{w + number}{
 Sample from elements with maximum number of words,
 i.e. number of white spaces -1.
 
-E.g.: \code{(w1)}
+E.g.: \code{(w1)}}
 }
 \examples{
 # Attach package
