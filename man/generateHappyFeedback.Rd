@@ -7,12 +7,11 @@
 generateHappyFeedback()
 }
 \value{
-Print statement
+Cat() statement
 }
 \description{
 Addin for RStudio for generating amusing feedback to lighten the mood
 of statisticians.
-
 
 See \code{details} for setting up key command.
 }

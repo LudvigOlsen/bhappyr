@@ -7,11 +7,10 @@
 #' @description Addin for RStudio for generating amusing feedback to lighten the mood
 #' of statisticians.
 #'
-#'
 #' See \code{details} for setting up key command.
 #' @author Ludvig Renbo Olsen, \email{r-pkgs@ludvigolsen.dk}
 #' @export
-#' @return Print statement
+#' @return Cat() statement
 #' @details How to set up key command in RStudio:
 #'
 #' After installing package.
@@ -30,6 +29,6 @@ generateHappyFeedback <- function(){
 
   sentence <- generate_sentence()
 
-  print(sentence)
+  cat(sentence)
 
 }
