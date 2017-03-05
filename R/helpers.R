@@ -23,13 +23,13 @@ first_upper <- function(x){
   # Capitalize first letter of string
   # and first letters after dots
   #
-  gsub("([.]\\s*[a-zA-Z]|^[a-zA-Z])","\\U\\1", x, perl=TRUE)
+  gsub("([.!?]\\s*[a-zA-Z]|^[a-zA-Z])","\\U\\1", x, perl=TRUE)
 
 }
 
 
 #   __________________ #< 0f56a682a551722ba64ba558fae36399 ># __________________
-#   helper: a_an                                                         ####
+#   helper: a_an                                                            ####
 
 a_an <- function(x){
 
@@ -146,4 +146,34 @@ count_char_occurrences <- function(char, s) {
   s2 <- gsub(char,"",s)
   return (nchar(s) - nchar(s2))
 }
+
+
+#   __________________ #< 9ad4ec5ac3356727fe16635b916d895e ># __________________
+#   helper: Any empty sublists?                                             ####
+
+empty_sub_lists <- function(list) {
+
+  # Get empty sub lists
+  empty_lists <-  plyr::llply(list, function(l){
+
+    !(length(l) > 0)
+
+  })
+
+  # If any empty sub lists
+  if (length(empty_lists) > 0){
+
+    # Unlist
+    empty_lists <- unlist(empty_lists)
+
+    # Get a string with the list names
+    empty_lists <- paste(names(empty_lists[empty_lists]), collapse=", ")
+
+  }
+
+  # Return empty lists
+  return(empty_lists)
+
+}
+
 
