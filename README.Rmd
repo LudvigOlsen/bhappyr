@@ -20,6 +20,7 @@ Generates amusing feedback to lighten the mood of statisticians. Contains addin 
 
 Pass new structures and word lists to generate unique sentences.  
 
+
 By Ludvig R. Olsen,  
 Cognitive Science, Aarhus University.  
 Started in March, 2017 
@@ -29,8 +30,10 @@ r-pkgs@ludvigolsen.dk
 
 Main functions:   
 
-* generateHappyFeedback (Also addin)
+* generateHappyFeedback (Addin)
 * generate_sentence
+* rate_sentence
+* access_word_list
 
 ## Installation  
 
@@ -106,6 +109,26 @@ generate_sentence(n = 3, structures = st,
                   word_lists = wl,
                   int_structures = FALSE,
                   int_word_lists = FALSE)
+
+```
+
+## Generate and rate sentences 
+Generate one or more sentences and ask user to rate them in the console.  
+
+Pass question, rating scale, and min/max rating labels.  
+
+Is able to randomly create rating scales - either once or for each sentence.
+
+Allows use of word types in max/min rating labels. Find a new word once or for every sentence.
+
+Note: Code not executed as it is interactive.
+
+```{r}
+# rate_sentence(n = 1, question = "Was this sentence funny?", rscale = c(1,
+#   10), max_rating = "Extremely", min_rating = "Not at all!",
+#   change_label = FALSE, change_rscale = FALSE, rscale_limits = c(1, 1000),
+#   structures = NULL, word_lists = NULL, int_structures = TRUE,
+#   int_word_lists = TRUE)
 
 ```
 

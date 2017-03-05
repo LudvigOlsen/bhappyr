@@ -17,8 +17,10 @@ Contact at: <r-pkgs@ludvigolsen.dk>
 
 Main functions:
 
--   generateHappyFeedback (Also addin)
+-   generateHappyFeedback (Addin)
 -   generate\_sentence
+-   rate\_sentence
+-   access\_word\_list
 
 Installation
 ------------
@@ -51,11 +53,11 @@ Quickly generate a (hopefully) amusing sentence.
 library(bhappyr)
 
 generateHappyFeedback()
-#> [1] "You know what they say about bugs? They are the niftily fantastic shop that captivatingly welds your donkey. I kind of agree with that!"
+#> [1] "I see a modest silhouetto of a top-hat. Scaramouche, Scaramouche, will you do the atelier. Evening-wears and lightning, very, very fright'ning me. (Galileo) Galileo, (Galileo) Galileo, Galileo figaro magnificoOhOhOhOHOOOH."
 generateHappyFeedback()
-#> [1] "You, my discreet Father, throw together simply pro-active code"
+#> [1] "Your fingers feel sympathetic on my keyboard :)"
 generateHappyFeedback()
-#> [1] "I love you :)   ...Yes, I'm just a thin piece of software, but I have qualia too!"
+#> [1] "Your fingers feel remarkable on my keyboard :)"
 ```
 
 ### Generate sentences with more control
@@ -80,7 +82,7 @@ wl <- list("salutation" = c("Sir", "Mother", "Dear", "Friend"),
 
 # Generate 1 sentence
 generate_sentence()
-#> [1] "Your fingers must be tired from all that typing! Here's a helpful periodical for you, my diligent Pastor :)"
+#> [1] "I'm a shooting communicant leaping through the read. Like a heron defying the laws of gravity. I'm a workhorse passing by like Lady Marlene. I'm gonna go go go. There's no stopping meeee."
 
 ## Example 2
 # Providing structures
@@ -89,8 +91,8 @@ generate_sentence()
 # Generate 2 sentences
 generate_sentence(n = 2, structures = st,
                   int_structures = FALSE)
-#> [1] "Bishop! You are diligent today! ;)"    
-#> [2] "Director! You are propitious today! ;)"
+#> [1] "Senator! You are optimistic today! ;)"    
+#> [2] "Right Reverend! You are amazing today! ;)"
 
 ## Example 3
 # Providing word_lists and structures
@@ -101,6 +103,28 @@ generate_sentence(n = 3, structures = st,
                   word_lists = wl,
                   int_structures = FALSE,
                   int_word_lists = FALSE)
-#> [1] "You modified that code! Smart!"    "You played that code! Beautiful!" 
-#> [3] "Dear! You are beautiful today! ;)"
+#> [1] "Mother! You are bright today! ;)"      
+#> [2] "You accomplished that code! Beautiful!"
+#> [3] "You played that code! Smart!"
+```
+
+Generate and rate sentences
+---------------------------
+
+Generate one or more sentences and ask user to rate them in the console.
+
+Pass question, rating scale, and min/max rating labels.
+
+Is able to randomly create rating scales - either once or for each sentence.
+
+Allows use of word types in max/min rating labels. Find a new word once or for every sentence.
+
+Note: Code not executed as it is interactive.
+
+``` r
+# rate_sentence(n = 1, question = "Was this sentence funny?", rscale = c(1,
+#   10), max_rating = "Extremely", min_rating = "Not at all!",
+#   change_label = FALSE, change_rscale = FALSE, rscale_limits = c(1, 1000),
+#   structures = NULL, word_lists = NULL, int_structures = TRUE,
+#   int_word_lists = TRUE)
 ```
