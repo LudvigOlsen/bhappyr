@@ -50,7 +50,9 @@ int_structs <- c("You, my [positive_adj] [salutation], [create_syn] [positive_ad
            "You know what they say about bugs? They are the [positive_adv] [positive_adj] [noun] that [positive_adv] [positive_vb(w1)]s your [noun]. I kind of agree with that!",
            "If the [noun] [positive_vb_past] your [positive_adj] [noun]. Would you [positive_vb] it? These are the questions facing a [noun] nowadays.",
            "My [statistics_tradition] model of the [nationality_adj] [noun]'s [verb_ing] strategies would make you [positive_vb]!",
-           "[salutation]! How you've grown with the task! I envy your [positive_adj] focusing skills!"
+           "[salutation]! How you've grown with the task! I envy your [positive_adj] focusing skills!",
+           "I [positive_vb_past] the [positive_adj] [noun] for you. I hope that's what you wanted? :)",
+           "If you keep working on your [positive_adj] [noun] R package, I don't see why you wouldn't get a Nobel Prize?"
            )
 
 song_structs <- c(

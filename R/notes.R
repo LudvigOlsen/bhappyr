@@ -10,6 +10,8 @@
 
 # Find a way to let user pass regex patterns as word info codes.
 
+# How to pass multiple word info codes?
+
 
 ##  .................. #< c07aec39ea2366624072bac5b2aa6daa ># ..................
 ##  Bugs to fix                                                             ####
