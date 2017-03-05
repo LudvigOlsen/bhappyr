@@ -121,14 +121,27 @@ Is able to randomly create rating scales - either once or for each sentence.
 
 Allows use of word types in max/min rating labels. Find a new word once or for every sentence.
 
-Note: Code not executed as it is interactive.
+Note: Code not evaluated as it is interactive.
 
-```{r}
-# rate_sentence(n = 1, question = "Was this sentence funny?", rscale = c(1,
-#   10), max_rating = "Extremely", min_rating = "Not at all!",
-#   change_label = FALSE, change_rscale = FALSE, rscale_limits = c(1, 1000),
-#   structures = NULL, word_lists = NULL, int_structures = TRUE,
-#   int_word_lists = TRUE)
+```{r eval=FALSE}
+# Attach package
+library(bhappyr)
+
+# Example 1
+# Generate 1 sentence and rate it.
+rate_sentence()
+
+# Example 2
+# Generate 3 sentences and rate them.
+# Use random scale on each run.
+rate_sentence(n=3, rscale = 'random',
+              change_rscale = TRUE)
+
+# Example 3
+# Generate 3 sentences and rate them.
+# Use random max_rating label on each run.
+rate_sentence(n=3, max_rating = "[superb(upper)]",
+              change_label = TRUE)
 
 ```
 
