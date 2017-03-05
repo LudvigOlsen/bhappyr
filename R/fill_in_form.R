@@ -1,7 +1,7 @@
 #   __________________ #< 52ce5853dfcc16be47d4b41db94f5f68 ># __________________
 #   Convert form to sentence                                                ####
 
-fill_in_form <- function(form){
+fill_in_form <- function(form, word_lists){
 
   ##  ............................................................................
   ##  Description                                                             ####
@@ -32,7 +32,7 @@ fill_in_form <- function(form){
       # Convert string to word
       # from the word_type inside
       # the brackets
-      return(sqrbr_to_word(c))
+      return(sqrbr_to_word(c, word_lists))
 
       ### . . . . . . . . .. #< 587e671e6dd1602ffd48f375cffcee47 ># . . . . . . . . ..
       ### If string does not contain [                                            ####

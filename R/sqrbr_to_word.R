@@ -3,7 +3,7 @@
 #   helper: sqrbr_to_word                                                   ####
 
 
-sqrbr_to_word <- function(sqrbr_word){
+sqrbr_to_word <- function(sqrbr_word, word_lists){
 
 ##  ............................................................................
 ##  Description                                                             ####
@@ -74,8 +74,32 @@ sqrbr_to_word <- function(sqrbr_word){
     word_info <- substr(word_type_info[2],1,
                         nchar(word_type_info[2])-1)
 
-    # Get data
-    d <- word_sets[[word_type]]
+### . . . . . . . . .. #< 1d8a6c2c42aed750ea097f634f012111 ># . . . . . . . . ..
+### Get and check word list                                                 ####
+
+    # Get word list
+    d <- tryCatch({
+
+      word_lists[[word_type]]
+
+    }, error = function(e){
+
+      stop(paste("Word list [",
+                 word_type,
+                 "] not found in word_lists",
+                 sep=""))
+    })
+
+    # If no word list was found
+    # raise error
+    if (is.null(d)){
+
+      stop(paste("Word list [",
+                 word_type,
+                 "] not found in word_lists",
+                 sep=""))
+
+    }
 
 ### . . . . . . . . .. #< b6270c60e20587eb09ea3a9c7364af5f ># . . . . . . . . ..
 ### If max number of words (w) is set                                       ####
@@ -109,7 +133,32 @@ sqrbr_to_word <- function(sqrbr_word){
 
     set_upper <- FALSE
 
-    d <- word_sets[[word_type]]
+### . . . . . . . . .. #< 89b4d7de28170bebf1b89b063768546f ># . . . . . . . . ..
+### Get and check word list                                                 ####
+
+    # Get word list
+    d <- tryCatch({
+
+      word_lists[[word_type]]
+
+    }, error = function(e){
+
+      stop(paste("Word list [",
+                 word_type,
+                 "] not found in word_lists",
+                 sep=""))
+    })
+
+  }
+
+  # If no word list was found
+  # raise error
+  if (is.null(d)){
+
+    stop(paste("Word list [",
+               word_type,
+               "] not found in word_lists",
+               sep=""))
 
   }
 
