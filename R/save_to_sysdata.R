@@ -14,6 +14,7 @@
 #                            "positive_adv" = positive_adv,
 #                            "positive_vb" = positive_vb,
 #                            "positive_vb_past" = positive_vb_past,
+#                            "superb" = superb,
 #                            "salutation" = salutation,
 #                            "small_syn" = small_syn,
 #                            "big_syn" = big_syn,

@@ -11,13 +11,12 @@
 
 
 
-
 # library(pluralize)
 # str(noun)
 #
 # noun_plural <- pluralize(noun)
 #
-# devtools::use_data(noun_plural, overwrite = T)
+#devtools::use_data(superb, overwrite = T)
 
 
 
