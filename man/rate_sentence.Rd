@@ -68,12 +68,15 @@ Collected responses, sentences, rating labels and
 and the rating scale (Dataframe).
 }
 \description{
-Generates a sentence and asks user to rate it
-in the console.
+Generates one or more sentences and asks user
+to rate them in the console.
 
 Pass question, rating scale, and min/max rating labels.
 
-Min/max rating labels can be passed as word types.
+Randomly create rating scales - either once or for each sentence.
+
+Min/max rating labels can be passed as word types. Words are sampled
+either once or once per sentence.
 See \code{Word types} below.
 }
 \section{Word types}{
