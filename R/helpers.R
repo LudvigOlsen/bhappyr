@@ -177,3 +177,42 @@ empty_sub_lists <- function(list) {
 }
 
 
+
+
+#   __________________ #< 97010e2adbc649e9e3270b0da7776735 ># __________________
+#   helper: readline_while                                                  ####
+
+readline_while <- function(message, responses = c("y","n")){
+
+  ##  ............................................................................
+  ##  Description                                                             ####
+
+  #
+  # Runs readline until an allowed answer is given
+  #
+
+  ##  .................. #< afa40bc764f547d75453ddab2af4aac9 ># ..................
+  ##  Argument checks                                                         ####
+
+  # message must be character
+  stopifnot(is.character(message))
+
+  ##  .................. #< 3852eee207dff65eb97bd39333303c3d ># ..................
+  ##  readline() until acceptable answer                                      ####
+
+  # As long as resp is not in the list of allowed responses
+  # or it doesn't exist (first round)
+  while(!exists("resp") || !(resp %in% responses)){
+
+    # Ask user for input with the given message
+    resp <- readline(message)
+
+  }
+
+  ##  .................. #< b8961aac26b8c9a70ef5589e5189e455 ># ..................
+  ##  Return response                                                         ####
+
+  # Return accepted user input
+  return(resp)
+
+}
