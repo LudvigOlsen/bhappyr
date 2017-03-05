@@ -28,7 +28,7 @@
 #' Press \code{Execute}.
 generateHappyFeedback <- function(){
 
-  sentence <- gen_sent()
+  sentence <- generate_sentence()
 
   print(sentence)
 
