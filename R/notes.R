@@ -8,6 +8,8 @@
 # Word sets must be saved to sysdata.rda to be available for addin
 # when package is not attached. See save_to_sysdata.R
 
+# Find a way to let user pass regex patterns as word info codes.
+
 
 ##  .................. #< c07aec39ea2366624072bac5b2aa6daa ># ..................
 ##  Bugs to fix                                                             ####
