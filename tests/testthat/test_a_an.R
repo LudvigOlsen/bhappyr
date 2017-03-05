@@ -2,7 +2,7 @@ library(bhappyr)
 context("a_an")
 
 test_that("a_an converts a and an correctly depending on upcoming word", {
-  a_an <- function(x){bhappyr::a_an(x)}
+  a_an <- function(x){bhappyr:::a_an(x)}
 
   expect_equal(a_an(" and ")," and ")
   expect_equal(a_an(" and hej")," and hej")
@@ -30,3 +30,4 @@ test_that("a_an converts a and an correctly depending on upcoming word", {
 
 
 })
+
