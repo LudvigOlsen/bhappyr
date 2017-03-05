@@ -44,7 +44,11 @@
 #' structure, pass only one structure and set int_structures to FALSE.
 #' @section Word types:
 #'
+#' Word lists have been collected from the internet. They might contain
+#' words that seem out of place. Let me know and I'll remove them.
+#'
 #' \subsection{Positive words}{
+#' [superb]
 #' [positive_adj]
 #' [positive_vb]
 #' [positive_vb_past]
