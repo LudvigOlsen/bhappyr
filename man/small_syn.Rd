@@ -12,4 +12,3 @@ small_syn
 A character vector containing English synonyms for "small".
 }
 \keyword{datasets}
-

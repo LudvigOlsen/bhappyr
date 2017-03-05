@@ -12,4 +12,3 @@ male_first_name
 A character vector containing male first names.
 }
 \keyword{datasets}
-

@@ -12,4 +12,3 @@ male_full_name
 A character vector containing male full names.
 }
 \keyword{datasets}
-

@@ -56,7 +56,11 @@ structure, pass only one structure and set int_structures to FALSE.
 \section{Word types}{
 
 
+Word lists have been collected from the internet. They might contain
+words that seem out of place. Let me know and I'll remove them.
+
 \subsection{Positive words}{
+[superb]
 [positive_adj]
 [positive_vb]
 [positive_vb_past]
@@ -104,6 +108,7 @@ i.e. number of white spaces -1.
 
 E.g.: \code{(w1)}}
 }
+
 \examples{
 # Attach package
 library(bhappyr)
@@ -112,6 +117,7 @@ library(bhappyr)
 st <- c("[salutation]! You are [positive_adj] today! ;)",
         "You [positive_vb_past] that code! [positive_adj]!")
 
+# Create list of word lists
 wl <- list("salutation" = c("Sir", "Mother", "Dear", "Friend"),
            "positive_adj" = c("beautiful", "bright", "smart"),
            "positive_vb_past" = c("accomplished","played", "modified"))
@@ -144,4 +150,3 @@ generate_sentence(n = 3, structures = st,
 \author{
 Ludvig Renbo Olsen, \email{r-pkgs@ludvigolsen.dk}
 }
-

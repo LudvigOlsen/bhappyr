@@ -35,4 +35,3 @@ Press \code{Execute}.
 \author{
 Ludvig Renbo Olsen, \email{r-pkgs@ludvigolsen.dk}
 }
-

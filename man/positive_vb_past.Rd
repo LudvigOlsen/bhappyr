@@ -12,4 +12,3 @@ positive_vb_past
 A character vector containing positive English past tense verbs.
 }
 \keyword{datasets}
-

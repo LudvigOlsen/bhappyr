@@ -12,4 +12,3 @@ big_syn
 A character vector containing English synonyms for "big".
 }
 \keyword{datasets}
-

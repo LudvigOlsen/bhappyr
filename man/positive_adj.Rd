@@ -12,4 +12,3 @@ positive_adj
 A character vector containing positive English adjectives.
 }
 \keyword{datasets}
-

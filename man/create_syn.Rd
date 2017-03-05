@@ -12,4 +12,3 @@ create_syn
 A character vector containing English synonyms for "create".
 }
 \keyword{datasets}
-

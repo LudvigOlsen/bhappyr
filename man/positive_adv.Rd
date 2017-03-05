@@ -12,4 +12,3 @@ positive_adv
 A character vector containing positive English adverbs.
 }
 \keyword{datasets}
-

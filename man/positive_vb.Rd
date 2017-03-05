@@ -12,4 +12,3 @@ positive_vb
 A character vector containing positive English verbs.
 }
 \keyword{datasets}
-

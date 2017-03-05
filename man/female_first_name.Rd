@@ -12,4 +12,3 @@ female_first_name
 A character vector containing female first names.
 }
 \keyword{datasets}
-
