@@ -216,3 +216,65 @@ readline_while <- function(message, responses = c("y","n")){
   return(resp)
 
 }
+
+
+#   __________________ #< 4a7db5ad7162984c6a118944606ccbf8 ># __________________
+#   Fill in rscale (‘random’)                                               ####
+
+fill_in_rscale <- function(rscale, rscale_limits){
+
+
+##  .................. #< 1b80714081ed45173ed49bb76c57c0f5 ># ..................
+##  Both min and max are ‘random’                                           ####
+
+  if (length(rscale) == 1){
+
+    if (rscale == 'random'){
+
+      rscale <- sort(sample(c(rscale_limits[1]: rscale_limits[2]), 2))
+
+    } else {
+
+      stop("rscale incorrectly specified.")
+
+    }
+
+  } else if (FALSE %ni% (rscale == c('random','random'))){
+
+    rscale <- sort(sample(c(rscale_limits[1]: rscale_limits[2]), 2))
+
+##  .................. #< ef25d886024dda7befd4a0583e74686e ># ..................
+##  Only min is ‘random’                                                    ####
+
+  } else if (rscale[1] == 'random'){
+
+    # Find the maximum rscale[1] value
+    max_min <- as.integer(rscale[2])-1
+
+    rscale <- c(sample(c(rscale_limits[1]: max_min), 1),
+                as.integer(rscale[2]))
+
+##  .................. #< a4364ccd858560b7867baa87ba811c13 ># ..................
+##  Only max is ‘random’                                                    ####
+
+  } else if (rscale[2] == 'random'){
+
+    # Find the minimum rscale[2] value
+    min_max <- as.integer(rscale[1])+1
+
+    rscale <- c(as.integer(rscale[1]),
+                sample(c(min_max: rscale_limits[2]), 1))
+  }
+
+##  .................. #< 6f0bafb21765985a9f961e1f7a66d9d1 ># ..................
+##  Return rscale                                                           ####
+
+  return(rscale)
+
+}
+
+
+#   __________________ #< 2e3a046f2fedaea9ab8b6f648db0ec64 ># __________________
+#   Not in %ni%                                                             ####
+
+`%ni%` <- Negate(`%in%`)
