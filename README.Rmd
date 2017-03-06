@@ -123,9 +123,10 @@ Generate one or more sentences and ask user to rate them in the console.
 
 Pass question, rating scale, and min/max rating labels.  
 
-Is able to randomly create rating scales - either once or for each sentence.
+Is able to randomize rating scales - either once or for every sentence. 
+Randomize both min. and max. scale values, or only one of them.  
 
-Allows use of word types in max/min rating labels. Find a new word once or for every sentence.
+Allows use of word types in max/min rating labels. Find a new word once or for every sentence.  
 
 ```{r message=FALSE, warning=FALSE}
 # Attach packages
@@ -144,9 +145,12 @@ rate_sentence(n=1, simulate = TRUE) %>%
   kable()
 
 # Example 2
-# Generate 3 sentences and rate them.
-# Use random scale on each run.
-rate_sentence(n=3, rscale = 'random',
+# Generate 2 sentences and rate them.
+# Randomize scale max value on each run.
+# Set limits of scale, so max value can be
+# maximum 100
+rate_sentence(n=2, rscale = c(1,'random'),
+              rscale_limits = c(1,100),
               change_rscale = TRUE,
               simulate = TRUE) %>% 
   kable()

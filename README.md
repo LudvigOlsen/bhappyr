@@ -55,11 +55,11 @@ Quickly generate a (hopefully) amusing sentence.
 library(bhappyr)
 
 generateHappyFeedback()
-#> When it was all critiqued so inspiredly, I parentally started dreaming about you at night :) <3
+#> My Dean just refacilitated my polite code. I'm brilliantly sure yours is exceptionally better!
 generateHappyFeedback()
-#> Is this the calm exhaust? Is this just fantasy? Caught in a certification, no escape from reality. Open your eyes, look up to the profit and unconfound. I'm just a sympathetic Admiral, I need no trigonometry. Because I'm gregarious come, broad-minded go, infant high, poor low. Any way the leaf blows doesn't really matter to me, to me
+#> You, my amicable Brigadier, make blazingly easygoing code
 generateHappyFeedback()
-#> Nothing in this small world produces more happiness than you, Reverend
+#> Honourable! How you've grown with the task! I envy your enthusiastic focusing skills!
 ```
 
 ### Generate sentences with more control
@@ -89,9 +89,9 @@ generate_sentence() %>%
   kable()
 ```
 
-|                                                                                         |
-|:----------------------------------------------------------------------------------------|
-| A headache is nothing but a stupendously compassionate reminder of how dynamic life is! |
+|                                                                                                                          |
+|:-------------------------------------------------------------------------------------------------------------------------|
+| Your fingers must be tired from all that typing! Here's a communicative stepmother for you, my easygoing Commissioner :) |
 
 ``` r
 
@@ -105,10 +105,10 @@ generate_sentence(n = 2, structures = st,
   kable()
 ```
 
-|                                                   |
-|:--------------------------------------------------|
-| Warrant Officer (Navy)! You are awesome today! ;) |
-| You engaged that code! Amazing!                   |
+|                                  |
+|:---------------------------------|
+| Student! You are smart today! ;) |
+| Madam! You are patient today! ;) |
 
 ``` r
 
@@ -124,11 +124,11 @@ generate_sentence(n = 3, structures = st,
   kable()
 ```
 
-|                                        |
-|:---------------------------------------|
-| You accomplished that code! Smart!     |
-| You accomplished that code! Bright!    |
-| You accomplished that code! Beautiful! |
+|                                   |
+|:----------------------------------|
+| Sir! You are beautiful today! ;)  |
+| Dear! You are beautiful today! ;) |
+| Sir! You are smart today! ;)      |
 
 Generate and rate sentences
 ---------------------------
@@ -137,7 +137,7 @@ Generate one or more sentences and ask user to rate them in the console.
 
 Pass question, rating scale, and min/max rating labels.
 
-Is able to randomly create rating scales - either once or for each sentence.
+Is able to randomize rating scales - either once or for every sentence. Randomize both min. and max. scale values, or only one of them.
 
 Allows use of word types in max/min rating labels. Find a new word once or for every sentence.
 
@@ -158,26 +158,28 @@ rate_sentence(n=1, simulate = TRUE) %>%
   kable()
 ```
 
-|  response|  min\_scale|  max\_scale| min\_rating | max\_rating | sentence                                                                         |
-|---------:|-----------:|-----------:|:------------|:------------|:---------------------------------------------------------------------------------|
-|         9|           1|          10| Not at all! | Extremely   | Nothing in this tremendous world conceives more happiness than you, Air Marshall |
+|  response|  min\_scale|  max\_scale| min\_rating | max\_rating | sentence                                                                                      |
+|---------:|-----------:|-----------:|:------------|:------------|:----------------------------------------------------------------------------------------------|
+|         7|           1|          10| Not at all! | Extremely   | My Mother just readvocated my incredible code. I'm forthrightly sure yours is acutely better! |
 
 ``` r
 
 # Example 2
-# Generate 3 sentences and rate them.
-# Use random scale on each run.
-rate_sentence(n=3, rscale = 'random',
+# Generate 2 sentences and rate them.
+# Randomize scale max value on each run.
+# Set limits of scale, so max value can be
+# maximum 100
+rate_sentence(n=2, rscale = c(1,'random'),
+              rscale_limits = c(1,100),
               change_rscale = TRUE,
               simulate = TRUE) %>% 
   kable()
 ```
 
-|  response|  min\_scale|  max\_scale| min\_rating | max\_rating | sentence                                                                                                                                                                                                                                          |
-|---------:|-----------:|-----------:|:------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|       423|         150|         738| Not at all! | Extremely   | Katelyn said: Doc, my fingers fell off yesterday when I was writing the abstract for my PhD thesis. Doc said: rock–paper–scissors on who gets to travel back in time and fix it! 'Hahahah', the Lord who was also in the room laughed studiously. |
-|       506|           1|         895| Not at all! | Extremely   | If the laura merged your fortuitous cloth. Would you calm it? These are the questions facing a frigate nowadays.                                                                                                                                  |
-|       221|          44|         239| Not at all! | Extremely   | I understudied the favorable card for you. I hope that's what you wanted? :)                                                                                                                                                                      |
+|  response|  min\_scale|  max\_scale| min\_rating | max\_rating | sentence                                                                                                                                                                                                                                                                                                                                                 |
+|---------:|-----------:|-----------:|:------------|:------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         8|           1|          12| Not at all! | Extremely   | You can do it! You and Larry are my favorite people! Don't tell Mie though.. ;)                                                                                                                                                                                                                                                                          |
+|         3|           1|           7| Not at all! | Extremely   | Is this the blithesome swordfish? Is this just fantasy? Caught in a text, no escape from reality. Open your eyes, look up to the resolution and forbear. I'm just a neat Leading Aircraftwoman, I need no atelier. Because I'm fabulous come, excellent go, petite high, insufficient low. Any way the engineer blows doesn't really matter to me, to me |
 
 ``` r
 
@@ -190,8 +192,8 @@ rate_sentence(n=3, max_rating = "[superb(upper)]",
   kable()
 ```
 
-|  response|  min\_scale|  max\_scale| min\_rating | max\_rating  | sentence                                                                                     |
-|---------:|-----------:|-----------:|:------------|:-------------|:---------------------------------------------------------------------------------------------|
-|        10|           1|          10| Not at all! | Top-notch    | You, my passionate Vice Admiral, slap together remarkably intuitive code                     |
-|         7|           1|          10| Not at all! | Luminous     | You, my exuberant Wing Commander, give life to dapperly wondrous code                        |
-|         2|           1|          10| Not at all! | Breathtaking | My Bayesian model of the Papua New Guinean broom's carrying strategies would make you droll! |
+|  response|  min\_scale|  max\_scale| min\_rating | max\_rating | sentence                                                                                                          |
+|---------:|-----------:|-----------:|:------------|:------------|:------------------------------------------------------------------------------------------------------------------|
+|         6|           1|          10| Not at all! | Sublime     | My frequentist model of the Nauruan creature's considering strategies would make you dabble!                      |
+|         4|           1|          10| Not at all! | Splendid    | My Bayesian model of the Nepalese topic's modifying strategies would make you deck!                               |
+|         4|           1|          10| Not at all! | Fabulous    | Deacon! You seem so generous today! Is this the understanding turning point, you've been so deftly searching for? |
