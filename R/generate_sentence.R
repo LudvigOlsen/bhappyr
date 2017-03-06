@@ -139,11 +139,11 @@ generate_sentence <- function(n = 1, structures = NULL,
 ##  Check arguments                                                         ####
 
 
-structs <- check_structures(structures,
-                            int_structures)
+  structs <- check_structures(structures,
+                              int_structures)
 
-word_lists <- check_word_lists(word_lists,
-                               int_word_lists)
+  word_lists <- check_word_lists(word_lists,
+                                 int_word_lists)
 
 ##  .................. #< 98c98f555a8737edb7002a316b73c4ee ># ..................
 ##  Generate sentences                                                      ####
