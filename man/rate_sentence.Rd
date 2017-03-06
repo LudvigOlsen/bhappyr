@@ -19,8 +19,9 @@ rate_sentence(n = 1, question = "Was this sentence funny?", rscale = c(1,
 
 E.g. \code{c(1,10)}
 
-Pass \code{'random'} to automatically create
-scale}
+Pass \code{'random'} to randomize
+scale. To only randomize min OR max,
+pass e.g. \code{c('random',10)}.}
 
 \item{max_rating}{Label for max rating value}
 

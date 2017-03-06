@@ -19,8 +19,9 @@
 #'
 #' E.g. \code{c(1,10)}
 #'
-#' Pass \code{'random'} to automatically create
-#' scale
+#' Pass \code{'random'} to randomize
+#' scale. To only randomize min OR max,
+#' pass e.g. \code{c('random',10)}.
 #' @param max_rating Label for max rating value
 #' @param min_rating Label for min rating value
 #' @param change_label Whether to sample new word for labels,
@@ -108,11 +109,13 @@ rate_sentence <- function(n = 1,
   }
 
   # Set scale once
-  if (rscale == 'random' && !isTRUE(change_rscale)){
+  if (!isTRUE(change_rscale)){
 
-    rscale <- sort(sample(c(rscale_limits[1]: rscale_limits[2]), 2))
+    rscale <- fill_in_rscale(rscale, rscale_limits)
 
   }
+
+
 
 
 ##  .................. #< 30308fdc84b1ae925d4f5c357d06ce87 ># ..................
@@ -129,9 +132,9 @@ rate_sentence <- function(n = 1,
     }
 
     # Set scale once
-    if (rscale == 'random' && isTRUE(change_rscale)){
+    if (isTRUE(change_rscale)){
 
-      rscale <- sort(sample(c(rscale_limits[1]: rscale_limits[2]), 2))
+      rscale <- fill_in_rscale(rscale, rscale_limits)
 
     }
 

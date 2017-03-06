@@ -10,7 +10,34 @@ test_that("rate_sentence outputs dataframe", {
 
 })
 
+test_that("rate_sentence creates no warnings", {
 
+  expect_warning(rate_sentence(3, rscale = c(1,'random'),
+                               rscale_limits = c(1,100),
+                               change_rscale = T,
+                               simulate = T),
+                 regexp = NA)
+
+  expect_warning(rate_sentence(3, rscale = c('random',1),
+                               rscale_limits = c(1,100),
+                               change_rscale = T,
+                               simulate = T),
+                 regexp = NA)
+
+  expect_warning(rate_sentence(3, rscale = c('random','random'),
+                               rscale_limits = c(1,100),
+                               change_rscale = T,
+                               simulate = T),
+                 regexp = NA)
+
+  expect_warning(rate_sentence(3, rscale = 'random',
+                               rscale_limits = c(1,100),
+                               change_rscale = T,
+                               simulate = T),
+                 regexp = NA)
+
+
+})
 
 
 
