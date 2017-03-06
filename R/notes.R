@@ -14,6 +14,8 @@
 
 # Set up more test for simulated rate_sentence()
 
+# rate_sentence: Possibility to only have random min or max scale. E.g. rscale = c(1, 'random')
+
 ##  .................. #< c07aec39ea2366624072bac5b2aa6daa ># ..................
 ##  Bugs to fix                                                             ####
 
